@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: moderation-service
+  datasource:
+    url: jdbc:postgresql://localhost:5439/moderation
+    username: platform
+    password: platform
+  jpa:
+    hibernate:
+      ddl-auto: update
+    open-in-view: false
+  kafka:
+    bootstrap-servers: localhost:9100
+  rabbitmq:
+    host: localhost
+    port: 5679
+    username: platform
+    password: platform
+    listener:
+      simple:
+        default-requeue-rejected: false
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health

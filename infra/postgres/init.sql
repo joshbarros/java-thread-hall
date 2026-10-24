@@ -1,0 +1,3 @@
+CREATE DATABASE boards;
+CREATE DATABASE moderation;
+CREATE DATABASE notices;
